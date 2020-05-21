@@ -1,0 +1,112 @@
+aside.onebox {
+  &.strummachinesong,
+  &.strummachinelist {
+    padding: 12px;
+    @media (min-width: 480px) {
+      padding-left: 9px;
+    }
+
+    .source {
+      display: none;
+    }
+
+    a.mainlink {
+      display: block;
+      @media (min-width: 480px) {
+        background: url("/plugins/sm-onebox/images/sm-logo-48.png") no-repeat 0 0;
+        background-size: 1.5em;
+        padding: 0.1em 0.1em 0.1em 1.8em;
+      }
+    }
+
+    h2, h3 {
+      margin: 0 0 4px;
+    }
+
+    .song-owner-chip {
+      background-color: white;
+      color: hsl(206, 25%, 65%);
+      font-size: 80%;
+      font-weight: normal;
+      border-radius: 3px;
+      border: solid 0.9px hsl(206, 25%, 85%);
+      padding: .05em .3em .05em;
+      margin: 0 0 0 0.2em;
+    }
+
+    .rawurl {
+      color: #bbb !important;
+      font-size: 13px;
+    }
+    .mainlink:hover .underline-on-hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.strummachinesong {
+    a.mainlink {
+      @media (min-width: 480px) {
+        background-size: 1.4em;
+        padding: 0.1em 0.1em 0.1em 1.7em;
+      }
+    }
+
+    .subtitle {
+      color: #777 !important;
+      font-weight: normal;
+      font-size: 90%;
+    }
+
+    .where-from {
+      color: #999 !important;
+      font-size: 15px;
+      margin: 0 0 3px;
+      b {
+        color: #888;
+      }
+    }
+  }
+
+  &.strummachinelist {
+    a.mainlink {
+      @media (min-width: 480px) {
+        background-size: 1.7em;
+        padding: 0.1em 0.1em 0.1em 2.1em;
+      }
+    }
+
+    ul {
+      padding: 0.75em;
+      background: #f8f8f8;
+      overflow: auto;
+      max-height: 40vh;
+      margin: 0.5em 0 0 0;
+      @media (min-width: 480px) {
+        margin-left: 1.45em;
+      }
+    }
+
+    ul li {
+      text-indent: -2em;
+      margin-left: 2em;
+      list-style-type: none;
+      padding-bottom: 4px;
+    }
+    ul li a {
+      font-weight: 500;
+    }
+    ul li a .subtitle {
+      font-weight: 300;
+      color: #999 !important;
+    }
+
+    .where-from {
+      color: #999 !important;
+      font-size: 15px;
+      margin: 0 0 3px;
+      b {
+        color: #888;
+      }
+    }
+  }
+}

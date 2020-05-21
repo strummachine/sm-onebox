@@ -1,0 +1,32 @@
+<a href="{{link}}" class="mainlink" target="_blank">
+  <h2>
+    {{title}}
+  </h2>
+  <div class="where-from">
+    {{#owner}}
+      <b>{{owner}}</b>’s list of <b>{{song_count}}&nbsp;songs</b>
+    {{/owner}}
+  </div>
+  <div class="underline-on-hover">
+    View and/or save this list on Strum&nbsp;Machine
+  </div>
+</a>
+<ul>
+  {{#songs}}
+    <li>
+      <a href="https://strummachine.com/app/songs/{{id}}" target="_blank">
+        {{title}}
+        {{#subtitle}}
+          <span class="subtitle">
+            &ndash; {{subtitle}}
+          </span>
+        {{/subtitle}}
+        {{#user_first}}
+          <span class="song-owner-chip">
+            {{user_first}} {{user_last}}
+          </span>
+        {{/user_first}}
+      </a>
+    </li>
+  {{/songs}}
+</ul>
