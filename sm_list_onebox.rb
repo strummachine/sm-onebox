@@ -39,7 +39,7 @@ class Onebox::Engine::StrumMachineListOnebox
   end
 
   def get_meta_data
-    response = Onebox::Helpers.fetch_response(url, 10) rescue nil
+    response = Onebox::Helpers.fetch_response(url) rescue nil
     html = Nokogiri::HTML(response)
     meta_data = {}
     html.css('meta').each do |m|
@@ -54,7 +54,7 @@ class Onebox::Engine::StrumMachineListOnebox
       song_data = ::MultiJson.load(json)
       meta_data[:songs] = song_data.map { |song| transform_song_json(song) }
     end
-    Rails.logger.warn(meta_data.inspect)
+    Rails.logger.warn("[sm-onebox] Fetched metadata for #{url}: " + meta_data.inspect)
     meta_data
   end
 

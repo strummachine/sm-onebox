@@ -2,7 +2,7 @@
 
 # name: sm-onebox
 # about: Onebox support for Strum Machine
-# version: 1.0.0
+# version: 1.0.1
 # authors: Luke Abbott
 # url: https://github.com/strummachine/sm-onebox
 

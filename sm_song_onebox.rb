@@ -24,7 +24,7 @@ class Onebox::Engine::StrumMachineSongOnebox
   # Onebox::Helpers.truncate(meta_data[:author], 250)
 
   def get_meta_data
-    response = Onebox::Helpers.fetch_response(url, 10) rescue nil
+    response = Onebox::Helpers.fetch_response(url) rescue nil
     html = Nokogiri::HTML(response)
     meta_data = {}
     html.css('meta').each do |m|
@@ -34,6 +34,7 @@ class Onebox::Engine::StrumMachineSongOnebox
         meta_data[m_property.to_sym] = m_content
       end
     end
+    Rails.logger.warn("[sm-onebox] Fetched metadata for #{url}: " + meta_data.inspect)
     meta_data
   end
 
